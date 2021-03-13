@@ -1,18 +1,26 @@
 #SingleInstance, Force
 #NoTrayIcon
+#MaxHotkeysPerInterval, 1000
 
 ^Space::WinSet, AlwaysOnTop, Toggle, A
 ;-------------------------------------------------------------------------------
-^#p::Run, % A_ComSpec " /K cd /d D:\ && Powershell"
-^+#p::Run, % "*Runas " A_ComSpec " /K cd /d D:\ && Powershell"
-^#c::Run, % A_ComSpec " /K cd /d D:\"
-^+#c::Run, % "*Runas " A_ComSpec " /K cd /d D:\"
+^#p::Run, % A_ComSpec " /K cd /d " CurrentFolder() " && Powershell"
+^+#p::Run, % "*Runas " A_ComSpec " /K cd /d " CurrentFolder() " && Powershell"
+^#c::Run, % A_ComSpec " /K cd /d " CurrentFolder()
+^+#c::Run, % "*Runas " A_ComSpec " /K cd /d " CurrentFolder()
 ;-------------------------------------------------------------------------------
 ^+#z::Run Explorer shell:::{ED7BA470-8E54-465E-825C-99712043E01C} ; all tasks
-^+#Left::Send {Media_Prev}
-^+#Right::Send {Media_Next}
-^+#Space::Send {Media_Play_Pause}
-^+#Enter::Send {Media_Stop}
+
+^#Up::Send, {Volume_Up}
+^#Down::Send, {Volume_Down}
+^#Left::Send, {Media_Prev}
+^#Right::Send, {Media_Next}
+^#Space::Send, {Media_Play_Pause}
+^#Enter::Send, {Media_Stop}
+
+^+#Up::system_SetScreenBrightness(5)
+^+#Down::system_SetScreenBrightness(-5)
+
 RWin::AppsKey
 ;-------------------------------------------------------------------------------
 ~;::
@@ -66,3 +74,15 @@ RWin::AppsKey
             SendInput, {BS 3}{Asc 34}{Asc 34}
     }
     Return
+
+CurrentFolder(hWnd=0) {
+    If hWnd||(hWnd:=WinExist("ahk_class CabinetWClass"))||(hWnd:=WinExist("ahk_class ExploreWClass"))
+    {
+        shell := ComObjCreate("Shell.Application")
+        Loop, % shell.Windows.Count
+            If ( (win := shell.Windows.Item(A_Index-1)).hWnd = hWnd )
+            Break
+        Return win.Document.Folder.Self.Path
+    }
+    Return "D:\"
+}
