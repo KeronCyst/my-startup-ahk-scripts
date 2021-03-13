@@ -1,6 +1,7 @@
 #SingleInstance, Force
 SendMode Input
 SetWorkingDir, %A_ScriptDir%
+
 Loop, Files, % A_ScripDir . "startup/**.ahk", DFR
 {
     SplitPath, A_LoopFileLongPath, , ScriptDir
