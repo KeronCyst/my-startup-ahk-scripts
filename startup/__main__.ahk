@@ -3,6 +3,7 @@
 DetectHiddenWindows On
 SetTitleMatchMode RegEx
 
+Menu, Tray, UseErrorLevel
 Menu, Tray, Icon, imageres.dll,307
 
 Loop, Parse, % "Path||Edit|Reload||Pause|Suspend||Exit||History|Variables|HotKeys|Info||Help", |
