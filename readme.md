@@ -2,19 +2,19 @@
 
 ## 功能
 
-### `win_move.ahk`
+### [WinMove.ahk](./startup/WinMove.ahk)
 
 任意窗口（不是最大化的），按住鼠标左键+右键来移动窗口（就像抓住窗口一样）
 
-### `one_pixel.ahk`
+### [OnePixel.ahk](./startup/OnePixel.ahk)
 
 当鼠标左键为按下状态时，按`w` `a` `s` `d`键将会往对应方向移动鼠标1个像素
 
-### `hotstrings.ahk`
+### [HotStrings.ahk](./startup/HotStrings.ahk)
 
 将一些经常打错的拼音自动纠正，或者实现一些短语的简写
 
-### `hotkey.ahk`
+### [HotKeys.ahk](./startup/HotKeys.ahk)
 
 一些常见的快捷键
 
@@ -52,7 +52,7 @@
 
 TODO: 扩张更多实用的按键功能
 
-### `__main__.ahk`
+### [ScriptManager.ahk](./startup/ScriptManager.ahk)
 
 AHK脚本管理器
 
@@ -86,24 +86,26 @@ ahk_* *.ahk
 在专门的程序中设定一些快捷键
 ```
 
-### `ClipboardMonitor.ahk`
+### [ClipboardMonitor.ahk](./startup/ClipboardMonitor/ClipboardMonitor.ahk)
 
 剪切板内容监控，复制时显示提示，文本保存为txt，图片保存为png
 
-### `Cube.ahk`
+### [Cube.ahk](./startup/Cube/Cube.ahk)
 
 类似candy通过`capslock`键选择文本或者文件，弹出相应菜单
 
-### `Mask.ahk`
+### [Mask.ahk](./startup/Mask/Mask.ahk)
 
 使用一张图片作为半透明的全屏水印
 
 ## 使用
 
-将`startup.ahk`设置为开机自启动即可自动运行以上所有脚本
+将[startup.ahk](startup.ahk)设置为开机自启动即可自动运行以上所有脚本
 
-+ 自定义启动脚本
+## 脚本启动规则
 
-  从startup目录开始递归所有子文件夹
++ 从startup目录开始递归所有子文件夹
 
-  在所有名称不是`lib`的文件夹中，如果包含与文件夹同名的ahk脚本则只执行这一个，否则执行所有的ahk脚本
++ 在所有名称不是`lib`的文件夹中，如果包含与文件夹同名的ahk脚本则只执行这一个，否则执行所有的ahk脚本
+
++ 如果所执行的脚本所在文件夹存在同名的`.cli`文件，将读取其首行作为ahk脚本的参数
