@@ -86,7 +86,7 @@ ahk_* *.ahk
 在专门的程序中设定一些快捷键
 ```
 
-### [ClipboardMonitor.ahk](./startup/ClipboardMonitor/ClipboardMonitor.ahk)
+### [ClipBoardMonitor.ahk](./startup/ClipBoardMonitor/ClipBoardMonitor.ahk)
 
 剪切板内容监控，复制时显示提示，文本保存为txt，图片保存为png
 
