@@ -53,6 +53,9 @@
         ],
         "^registry": [
             "i)^(¼ÆËã»ú\\\\)?(HKCU|HKCR|HKCC|HKU|HKLM|HKEY_CLASSES_ROOT|HKEY_CURRENT_USER|HKEY_LOCAL_MACHINE|HKEY_USERS|HKEY_CURRENT_CONFIG)"
+        ],
+        "^ip": [
+            "^(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d|\\d)\\.(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d|\\d)\\.(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d|\\d)\\.(25[0-5]|2[0-4]\\d|1\\d{2}|[1-9]\\d|\\d)$"
         ]
     },
     "transtation": {
