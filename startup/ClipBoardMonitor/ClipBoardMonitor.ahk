@@ -1,8 +1,7 @@
 #NoTrayIcon
 #Persistent
 #SingleInstance, force
-; Changes how long the script keeps trying to access the clipboard when the first attempt fails.
-#ClipboardTimeout 500
+#ClipboardTimeout 0
 #KeyHistory 0
 ListLines, Off
 Process, Priority, , High

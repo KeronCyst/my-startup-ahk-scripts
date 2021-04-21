@@ -1,7 +1,11 @@
 #SingleInstance, Force
 #NoTrayIcon
 
-#If Not (WinActive("ahk_exe Code.exe") Or WinActive("ahk_exe sublime_text.exe") Or WinActive("ahk_exe pycharm64.exe"))
+GroupAdd, "advanced_editors", ahk_exe Code.exe
+GroupAdd, "advanced_editors", ahk_exe sublime_text.exe
+GroupAdd, "advanced_editors", ahk_exe pycharm64.exe
+
+#If Not WinActive("ahk_group advanced_editors")
     ^Enter::
         Send, {End}{Enter}
         Return
