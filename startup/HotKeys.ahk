@@ -4,10 +4,10 @@
 ;-------------------------------------------------------------------------------
 ^Space::WinSet, AlwaysOnTop, Toggle, A
 ;-------------------------------------------------------------------------------
-^#c::Run, % A_ComSpec " /K cd /d " CurrentFolder()
-^+#c::Run, % "*Runas " A_ComSpec " /K cd /d " CurrentFolder()
-^#p::Run, % A_ComSpec " /K cd /d " CurrentFolder() " && Powershell"
-^+#p::Run, % "*Runas " A_ComSpec " /K cd /d " CurrentFolder() " && Powershell"
+^#c::Run, % A_ComSpec " /K cd /d " CurrentFolder(), , UseErrorLevel
+^+#c::Run, % "*Runas " A_ComSpec " /K cd /d " CurrentFolder(), , UseErrorLevel
+^#p::Run, % A_ComSpec " /K cd /d " CurrentFolder() " && Powershell", , UseErrorLevel
+^+#p::Run, % "*Runas " A_ComSpec " /K cd /d " CurrentFolder() " && Powershell", , UseErrorLevel
 ;-------------------------------------------------------------------------------
 ^+#z::Run Explorer shell:::{ED7BA470-8E54-465E-825C-99712043E01C} ; all tasks
 ;-------------------------------------------------------------------------------
