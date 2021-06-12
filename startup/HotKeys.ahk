@@ -11,12 +11,15 @@
 ;-------------------------------------------------------------------------------
 ^+#z::Run Explorer shell:::{ED7BA470-8E54-465E-825C-99712043E01C} ; all tasks
 ;-------------------------------------------------------------------------------
-^#Up::Send, {Volume_Up}
-^#Down::Send, {Volume_Down}
-^#Left::Send, {Media_Prev}
-^#Right::Send, {Media_Next}
-^#Space::Send, {Media_Play_Pause}
-^#Enter::Send, {Media_Stop}
+; ^#Left::Send, {Media_Prev} ; conflict with switching virtual desktop
+; ^#Right::Send, {Media_Next} ; conflict with switching virtual desktop
+;-------------------------------------------------------------------------------
+^#!Up::Send, {Volume_Up}
+^#!Down::Send, {Volume_Down}
+^#!Left::Send, {Media_Prev}
+^#!Right::Send, {Media_Next}
+^#!Space::Send, {Media_Play_Pause}
+^#!Enter::Send, {Media_Stop}
 ;-------------------------------------------------------------------------------
 ^+#Up::system_SetScreenBrightness(5)
 ^+#Down::system_SetScreenBrightness(-5)
