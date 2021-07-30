@@ -60,5 +60,6 @@
 :*:zhaun::zhuan
 :*:zhufnag::zhufang
 :*:zhuxaio::zhuxiao
-
-:*:...::......
+:*:ifocnfig::ifconfig
+:*:dokcer::docker
+:*:docekr::docker
