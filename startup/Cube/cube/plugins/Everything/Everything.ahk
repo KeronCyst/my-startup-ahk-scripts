@@ -1,3 +1,5 @@
 #Include, .\cube\settings.ahk
 
-Run, % Cube_EXE.Everything " -search """ Clipboard """"
+EnvGet, EVERYTHING, EVERYTHING
+
+Run, % EVERYTHING " -search """ Clipboard """"

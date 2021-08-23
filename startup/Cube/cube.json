@@ -76,14 +76,11 @@
     "exe": {
         "Chrome": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
         "Edge": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
-        "Everything": "D:\\SoftWare\\Everything\\Everything.exe",
         "Firefox": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
         "IE": "C:\\Program Files\\Internet Explorer\\iexplore.exe",
         "Notepad": "C:\\Windows\\System32\\notepad.exe",
-        "NPP": "D:\\SoftWare\\Notepad++\\notepad++.exe",
-        "SublimeText": "D:\\SoftWare\\SublimeText\\sublime_text.exe",
-        "VSCode": "C:\\Program Files\\Microsoft VS Code\\Code.exe",
-        "BCompare": "D:\\SoftWare\\BeyondCompare\\BCompare.exe"
+        "SublimeText": "D:\\sync\\software\\SublimeText\\sublime_text.exe",
+        "VSCode": "C:\\Program Files\\Microsoft VS Code\\Code.exe"
     },
     "url": {
         "Amazon": "http://www.amazon.com/s/ref=nb_sb_noss?field-keywords=%s",

@@ -1,6 +1,6 @@
 #Include, .\cube\settings.ahk
 
-HELPFILES := {"AutoHotkey.chm": "C:\\Program Files\\AutoHotkey\\AutoHotkey.chm","AutoHotkey_EN.chm": "C:\\Program Files\\AutoHotkey\\AutoHotkey_EN.chm","AutoHotkey_CN.chm": "C:\\Program Files\\AutoHotkey\\AutoHotkey_CN.chm"}
+HELPFILES := {"AutoHotkey.chm": "C:\\Program Files\\AutoHotkey\\AutoHotkey.chm"}
 
 For k, v in HELPFILES
 {

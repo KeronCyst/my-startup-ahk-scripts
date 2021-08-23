@@ -29,7 +29,6 @@ Loop, Parse, % "Path||Edit|Reload||Pause|Suspend||Exit||History|Variables|HotKey
     If (A_LoopField == "Help")
         Menu, LV_Menu, Icon, % A_LoopField, %A_WinDir%\hh.exe, 1
 }
-Gosub, ShowGUI
 SetTimer, Label_LV_REFRESH, 500
 OnMessage(0x404, "AHK_NOTIFYICON")
 Return
@@ -39,7 +38,7 @@ ShowGUI:
     Gui Margin, 0, 0
     Gui Font, , Consolas
     Gui Add, ListView, Grid vListview gLV_Event, HWND|PID|Pause|Suspend|ScriptFullPath
-    Gui Show, w1200 h450 Center
+    Gui Show, w1300 h450 Center
     ListViewInfo :=
 Return
 
@@ -63,7 +62,7 @@ Label_LV_REFRESH:
         LV_ModifyCol(2, "AutoHdr")
         LV_ModifyCol(3, "AutoHdr")
         LV_ModifyCol(4, "AutoHdr")
-        LV_ModifyCol(5, "AutoHdr")
+        LV_ModifyCol(5, "Auto")
         GuiControl, +Redraw, MyListView ; 重新启用重绘 (上面把它禁用了).
     }
 Return
