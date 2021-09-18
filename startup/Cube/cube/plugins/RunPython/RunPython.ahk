@@ -3,7 +3,7 @@
 SplitPath, Clipboard, OutFileName, OutDir, , , OutDrive
 If FileExist(OutDir "\venv")
 {
-    Run, % A_ComSpec " /k cd /d """ OutDir """ && python """ OutFileName """"
+    Run, % A_ComSpec " /k cd /d """ OutDir """ && venv\Scripts\activate && python """ OutFileName """"
     Return
 }
 
